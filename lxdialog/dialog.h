@@ -26,11 +26,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-#ifndef KBUILD_NO_NLS
-# include <libintl.h>
-#else
-# define gettext(Msgid) ((const char *) (Msgid))
-#endif
+#define gettext(Msgid) ((const char *) (Msgid))
 
 #ifdef __sun__
 #define CURS_MACROS
