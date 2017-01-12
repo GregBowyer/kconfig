@@ -22,18 +22,11 @@ extern "C" {
 #endif
 
 #ifndef PRODUCT_ENV
-/* BR2 for buildroot, KCONFIG for kernel. */
-#define PRODUCT_ENV "KCONFIG"
+#define PRODUCT_ENV "CONFIG"
 #endif
 
 #ifndef PRODUCT
-/* Buildroot buildroot, Kernel for kernel. */
-#define PRODUCT "Kernel"
-#endif
-
-#ifndef PRODUCT_DOMAIN
-/* buildroot.org for buildroot, kernel.org for kernel. */
-#define PRODUCT_DOMAIN "kernel.org"
+#define PRODUCT ""
 #endif
 
 #define P(name,type,arg)	extern type name arg
@@ -43,7 +36,7 @@ extern "C" {
 #define SRCTREE "srctree"
 
 #ifndef PACKAGE
-#define PACKAGE "linux"
+#define PACKAGE "kconfig"
 #endif
 
 #define LOCALEDIR "/usr/share/locale"
